@@ -3,9 +3,9 @@ import pandas as pd
 AWS_BUCKET_PATH = "s3://wagon-public-datasets/taxi-fare-train.csv"
 
 
-def get_data(nrows=10_000):
+def get_data(nrows=1000):
     '''returns a DataFrame with nrows from s3 bucket'''
-    df = pd.read_csv(AWS_BUCKET_PATH, nrows=nrows)
+    df = pd.read_csv(AWS_BUCKET_PATH,nrows=nrows)
     return df
 
 
@@ -26,3 +26,4 @@ def clean_data(df, test=False):
 
 if __name__ == '__main__':
     df = get_data()
+#'~/code/clementrr/taxi.csv'
